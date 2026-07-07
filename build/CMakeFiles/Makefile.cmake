@@ -104,4 +104,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "benchmark/CMakeFiles/mini_search_benchmark.dir/DependInfo.cmake"
   "src/file_reader/CMakeFiles/FilePreproc.dir/DependInfo.cmake"
   "src/query_engine/CMakeFiles/QueryParse.dir/DependInfo.cmake"
+  "src/text_processor/CMakeFiles/TextProcessor.dir/DependInfo.cmake"
   )

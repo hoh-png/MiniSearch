@@ -1,4 +1,4 @@
-prefix=C:/Program Files (x86)/mini_search
+prefix=C:/Program Files (x86)/MiniSearch
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 

@@ -160,6 +160,44 @@ depend:
 	cd /d C:\Users\HOHUI\Desktop\task3\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/text_processor/CMakeFiles/TextProcessor.dir/rule:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/text_processor/CMakeFiles/TextProcessor.dir/rule
+.PHONY : src/text_processor/CMakeFiles/TextProcessor.dir/rule
+
+# Convenience name for target.
+TextProcessor: src/text_processor/CMakeFiles/TextProcessor.dir/rule
+.PHONY : TextProcessor
+
+# fast build rule for target.
+TextProcessor/fast:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/build
+.PHONY : TextProcessor/fast
+
+text_processor.obj: text_processor.cpp.obj
+.PHONY : text_processor.obj
+
+# target to build an object file
+text_processor.cpp.obj:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/text_processor.cpp.obj
+.PHONY : text_processor.cpp.obj
+
+text_processor.i: text_processor.cpp.i
+.PHONY : text_processor.i
+
+# target to preprocess a source file
+text_processor.cpp.i:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/text_processor.cpp.i
+.PHONY : text_processor.cpp.i
+
+text_processor.s: text_processor.cpp.s
+.PHONY : text_processor.s
+
+# target to generate assembly for a file
+text_processor.cpp.s:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/text_processor.cpp.s
+.PHONY : text_processor.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -172,6 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... TextProcessor
+	@echo ... text_processor.obj
+	@echo ... text_processor.i
+	@echo ... text_processor.s
 .PHONY : help
 
 

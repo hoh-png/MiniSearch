@@ -176,11 +176,11 @@ src/query_engine/clean: src/query_engine/CMakeFiles/QueryParse.dir/clean
 # Directory level rules for directory src/text_processor
 
 # Recursive "all" directory target.
-src/text_processor/all:
+src/text_processor/all: src/text_processor/CMakeFiles/TextProcessor.dir/all
 .PHONY : src/text_processor/all
 
 # Recursive "codegen" directory target.
-src/text_processor/codegen:
+src/text_processor/codegen: src/text_processor/CMakeFiles/TextProcessor.dir/codegen
 .PHONY : src/text_processor/codegen
 
 # Recursive "preinstall" directory target.
@@ -188,7 +188,7 @@ src/text_processor/preinstall:
 .PHONY : src/text_processor/preinstall
 
 # Recursive "clean" directory target.
-src/text_processor/clean:
+src/text_processor/clean: src/text_processor/CMakeFiles/TextProcessor.dir/clean
 .PHONY : src/text_processor/clean
 
 #=============================================================================
@@ -236,7 +236,9 @@ third_party/benchmark/src/clean: third_party/benchmark/src/CMakeFiles/benchmark_
 # Target rules for target CMakeFiles/MiniSearch.dir
 
 # All Build rule for target.
-CMakeFiles/MiniSearch.dir/all:
+CMakeFiles/MiniSearch.dir/all: src/query_engine/CMakeFiles/QueryParse.dir/all
+CMakeFiles/MiniSearch.dir/all: src/file_reader/CMakeFiles/FilePreproc.dir/all
+CMakeFiles/MiniSearch.dir/all: src/text_processor/CMakeFiles/TextProcessor.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MiniSearch.dir\build.make CMakeFiles/MiniSearch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\MiniSearch.dir\build.make CMakeFiles/MiniSearch.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=3,4 "Built target MiniSearch"
@@ -244,7 +246,7 @@ CMakeFiles/MiniSearch.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MiniSearch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/MiniSearch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 0
 .PHONY : CMakeFiles/MiniSearch.dir/rule
@@ -271,7 +273,7 @@ CMakeFiles/MiniSearch.dir/clean:
 third_party/benchmark/src/CMakeFiles/benchmark.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target benchmark"
 .PHONY : third_party/benchmark/src/CMakeFiles/benchmark.dir/all
 
 # Build rule for subdir invocation for target.
@@ -288,7 +290,7 @@ benchmark: third_party/benchmark/src/CMakeFiles/benchmark.dir/rule
 # codegen rule for target.
 third_party/benchmark/src/CMakeFiles/benchmark.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Finished codegen for target benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Finished codegen for target benchmark"
 .PHONY : third_party/benchmark/src/CMakeFiles/benchmark.dir/codegen
 
 # clean rule for target.
@@ -303,7 +305,7 @@ third_party/benchmark/src/CMakeFiles/benchmark.dir/clean:
 third_party/benchmark/src/CMakeFiles/benchmark_main.dir/all: third_party/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark_main.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark_main.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=27,28 "Built target benchmark_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=29,30 "Built target benchmark_main"
 .PHONY : third_party/benchmark/src/CMakeFiles/benchmark_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -320,7 +322,7 @@ benchmark_main: third_party/benchmark/src/CMakeFiles/benchmark_main.dir/rule
 # codegen rule for target.
 third_party/benchmark/src/CMakeFiles/benchmark_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f third_party\benchmark\src\CMakeFiles\benchmark_main.dir\build.make third_party/benchmark/src/CMakeFiles/benchmark_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=27,28 "Finished codegen for target benchmark_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=29,30 "Finished codegen for target benchmark_main"
 .PHONY : third_party/benchmark/src/CMakeFiles/benchmark_main.dir/codegen
 
 # clean rule for target.
@@ -333,14 +335,17 @@ third_party/benchmark/src/CMakeFiles/benchmark_main.dir/clean:
 
 # All Build rule for target.
 benchmark/CMakeFiles/mini_search_benchmark.dir/all: third_party/benchmark/src/CMakeFiles/benchmark.dir/all
+benchmark/CMakeFiles/mini_search_benchmark.dir/all: src/query_engine/CMakeFiles/QueryParse.dir/all
+benchmark/CMakeFiles/mini_search_benchmark.dir/all: src/file_reader/CMakeFiles/FilePreproc.dir/all
+benchmark/CMakeFiles/mini_search_benchmark.dir/all: src/text_processor/CMakeFiles/TextProcessor.dir/all
 	$(MAKE) $(MAKESILENT) -f benchmark\CMakeFiles\mini_search_benchmark.dir\build.make benchmark/CMakeFiles/mini_search_benchmark.dir/depend
 	$(MAKE) $(MAKESILENT) -f benchmark\CMakeFiles\mini_search_benchmark.dir\build.make benchmark/CMakeFiles/mini_search_benchmark.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=29,30 "Built target mini_search_benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=31,32 "Built target mini_search_benchmark"
 .PHONY : benchmark/CMakeFiles/mini_search_benchmark.dir/all
 
 # Build rule for subdir invocation for target.
 benchmark/CMakeFiles/mini_search_benchmark.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 benchmark/CMakeFiles/mini_search_benchmark.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 0
 .PHONY : benchmark/CMakeFiles/mini_search_benchmark.dir/rule
@@ -352,7 +357,7 @@ mini_search_benchmark: benchmark/CMakeFiles/mini_search_benchmark.dir/rule
 # codegen rule for target.
 benchmark/CMakeFiles/mini_search_benchmark.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f benchmark\CMakeFiles\mini_search_benchmark.dir\build.make benchmark/CMakeFiles/mini_search_benchmark.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=29,30 "Finished codegen for target mini_search_benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=31,32 "Finished codegen for target mini_search_benchmark"
 .PHONY : benchmark/CMakeFiles/mini_search_benchmark.dir/codegen
 
 # clean rule for target.
@@ -423,6 +428,38 @@ src/query_engine/CMakeFiles/QueryParse.dir/codegen:
 src/query_engine/CMakeFiles/QueryParse.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/clean
 .PHONY : src/query_engine/CMakeFiles/QueryParse.dir/clean
+
+#=============================================================================
+# Target rules for target src/text_processor/CMakeFiles/TextProcessor.dir
+
+# All Build rule for target.
+src/text_processor/CMakeFiles/TextProcessor.dir/all:
+	$(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=7,8 "Built target TextProcessor"
+.PHONY : src/text_processor/CMakeFiles/TextProcessor.dir/all
+
+# Build rule for subdir invocation for target.
+src/text_processor/CMakeFiles/TextProcessor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/text_processor/CMakeFiles/TextProcessor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\HOHUI\Desktop\task3\build\CMakeFiles 0
+.PHONY : src/text_processor/CMakeFiles/TextProcessor.dir/rule
+
+# Convenience name for target.
+TextProcessor: src/text_processor/CMakeFiles/TextProcessor.dir/rule
+.PHONY : TextProcessor
+
+# codegen rule for target.
+src/text_processor/CMakeFiles/TextProcessor.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\HOHUI\Desktop\task3\build\CMakeFiles --progress-num=7,8 "Finished codegen for target TextProcessor"
+.PHONY : src/text_processor/CMakeFiles/TextProcessor.dir/codegen
+
+# clean rule for target.
+src/text_processor/CMakeFiles/TextProcessor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/clean
+.PHONY : src/text_processor/CMakeFiles/TextProcessor.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

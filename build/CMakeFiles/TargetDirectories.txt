@@ -46,6 +46,7 @@ C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/list_install_comp
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/install.dir
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/install/local.dir
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/install/strip.dir
+C:/Users/HOHUI/Desktop/task3/build/src/text_processor/CMakeFiles/TextProcessor.dir
 C:/Users/HOHUI/Desktop/task3/build/src/text_processor/CMakeFiles/edit_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/text_processor/CMakeFiles/rebuild_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/text_processor/CMakeFiles/list_install_components.dir

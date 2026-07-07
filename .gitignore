@@ -1,0 +1,25 @@
+# Build
+build/
+cmake-build-*/
+**/*.exe
+**/*.dll
+**/*.obj
+**/*.lib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CMake
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
+Makefile
+compile_commands.json
+
+# Git
+.DS_Store
+Thumbs.db

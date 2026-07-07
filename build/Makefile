@@ -238,6 +238,19 @@ QueryParse/fast:
 	$(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/build
 .PHONY : QueryParse/fast
 
+#=============================================================================
+# Target rules for targets named TextProcessor
+
+# Build rule for target.
+TextProcessor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TextProcessor
+.PHONY : TextProcessor
+
+# fast build rule for target.
+TextProcessor/fast:
+	$(MAKE) $(MAKESILENT) -f src\text_processor\CMakeFiles\TextProcessor.dir\build.make src/text_processor/CMakeFiles/TextProcessor.dir/build
+.PHONY : TextProcessor/fast
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -277,6 +290,7 @@ help:
 	@echo ... FilePreproc
 	@echo ... MiniSearch
 	@echo ... QueryParse
+	@echo ... TextProcessor
 	@echo ... benchmark
 	@echo ... benchmark_main
 	@echo ... mini_search_benchmark

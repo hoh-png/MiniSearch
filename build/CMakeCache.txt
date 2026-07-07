@@ -214,7 +214,7 @@ CMAKE_INSTALL_MANDIR:PATH=
 CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/mini_search
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/MiniSearch
 
 CMAKE_INSTALL_PYTOOLSDIR:PATH=share/googlebenchmark/tools
 
@@ -275,7 +275,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SpaceShooter
+CMAKE_PROJECT_NAME:STATIC=MiniSearch
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -385,19 +385,16 @@ CXXFEATURECHECK_DEBUG:BOOL=OFF
 GIT_EXECUTABLE:FILEPATH=E:/PyCharm 2025.2.1.1/Git/cmd/git.exe
 
 //Value Computed by CMake
-SpaceShooter_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build
+MiniSearch_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build
 
 //Value Computed by CMake
-SpaceShooter_IS_TOP_LEVEL:STATIC=ON
+MiniSearch_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-SpaceShooter_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3
+MiniSearch_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3
 
 //Value Computed by CMake
 benchmark_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build/third_party/benchmark
-
-//The directory containing a CMake configuration file for benchmark.
-benchmark_DIR:PATH=benchmark_DIR-NOTFOUND
 
 //Value Computed by CMake
 benchmark_IS_TOP_LEVEL:STATIC=OFF
@@ -415,15 +412,6 @@ file_reader_IS_TOP_LEVEL:STATIC=OFF
 file_reader_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/src/file_reader
 
 //Value Computed by CMake
-mini_search_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build
-
-//Value Computed by CMake
-mini_search_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-mini_search_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3
-
-//Value Computed by CMake
 query_engine_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build/src/query_engine
 
 //Value Computed by CMake
@@ -431,6 +419,15 @@ query_engine_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 query_engine_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/src/query_engine
+
+//Value Computed by CMake
+text_processor_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build/src/text_processor
+
+//Value Computed by CMake
+text_processor_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+text_processor_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/src/text_processor
 
 
 ########################
@@ -699,5 +696,5 @@ RUN_HAVE_STD_REGEX:INTERNAL=0
 //Result of try_run()
 RUN_HAVE_STEADY_CLOCK:INTERNAL=0
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/mini_search
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/MiniSearch
 
