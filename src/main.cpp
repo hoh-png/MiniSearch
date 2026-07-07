@@ -3,12 +3,16 @@
 #include <vector>
 #include <set>
 #include <algorithm>
+#include <map>
+#include <windows.h>
 #include "file_reader.h"
 #include "query_engine.h"
 #include "text_processor.h"
 
 int main(int argc, char* argv[])
 {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     const char* dirPath = (argc >= 2) ? argv[1] : ".";
 
     // 第一步：用 FilePreproc 读取文件夹，分词
@@ -30,10 +34,12 @@ int main(int argc, char* argv[])
 
     std::vector<DocInfo> docInfoList;
     docInfoList.reserve(docCount);
+    std::map<int, std::string> docPaths;
 
     for (int i = 0; i < docCount; ++i) {
         DocInfo info;
         info.doc_id = static_cast<int>(docArr[i].docId);
+        docPaths[info.doc_id] = docArr[i].filePath;
         for (uint32_t j = 0; j < docArr[i].wordItemCnt; ++j) {
             info.word_tf[docArr[i].wordTfArr[j].word] =
                 static_cast<int>(docArr[i].wordTfArr[j].tf);
@@ -132,13 +138,53 @@ int main(int argc, char* argv[])
             }
         }
 
+        // 收集所有查询词
+        std::set<std::string> queryWords;
+        for (const auto& unit : query.units) {
+            for (const auto& word : unit.words) {
+                queryWords.insert(word);
+            }
+        }
+
         // 显示结果
         if (matchedDocs.empty()) {
             std::cout << "  未找到匹配的文档" << std::endl;
         } else {
-            std::cout << "  找到 " << matchedDocs.size() << " 篇匹配文档:" << std::endl;
+            // 计算每篇文档的相关度得分（查询词TF之和）
+            struct ScoredDoc {
+                int docId;
+                int totalTf;
+            };
+            std::vector<ScoredDoc> scoredDocs;
             for (int docId : matchedDocs) {
-                std::cout << "    Doc #" << docId << std::endl;
+                int totalTf = 0;
+                for (const auto& word : queryWords) {
+                    auto it = invertMap.find(word);
+                    if (it != invertMap.end()) {
+                        for (const auto& posting : it->second) {
+                            if (posting.doc_id == docId) {
+                                totalTf += posting.tf;
+                            }
+                        }
+                    }
+                }
+                scoredDocs.push_back({docId, totalTf});
+            }
+
+            // 按相关度降序排序
+            std::sort(scoredDocs.begin(), scoredDocs.end(),
+                [](const ScoredDoc& a, const ScoredDoc& b) {
+                    return a.totalTf > b.totalTf;
+                });
+
+            std::cout << "  找到 " << matchedDocs.size() << " 篇匹配文档:" << std::endl;
+            for (const auto& sd : scoredDocs) {
+                std::string path = docPaths[sd.docId];
+                size_t lastSlash = path.find_last_of("\\/");
+                std::string fileName = (lastSlash != std::string::npos)
+                    ? path.substr(lastSlash + 1) : path;
+                std::cout << "    " << fileName << "    "
+                          << "(" << sd.totalTf << " 次)" << std::endl;
             }
         }
     }

@@ -3,6 +3,16 @@
 #include <sstream>
 #include <algorithm>
 
+// 获取UTF-8字符的字节长度
+static int Utf8CharLen(unsigned char lead)
+{
+    if (lead < 0x80) return 1;
+    if ((lead & 0xE0) == 0xC0) return 2;
+    if ((lead & 0xF0) == 0xE0) return 3;
+    if ((lead & 0xF8) == 0xF0) return 4;
+    return 1;
+}
+
 // 文本清洗、分词：转小写、剔除标点、按空格分割
 // 与 file_reader 保持一致：跳过数字，跳过标点和空格
 std::vector<std::string> cleanAndSplit(const std::string& rawText)
@@ -10,10 +20,31 @@ std::vector<std::string> cleanAndSplit(const std::string& rawText)
     std::vector<std::string> wordList;
     std::string word;
 
-    for (unsigned char ch : rawText)
+    for (size_t i = 0; i < rawText.size(); )
     {
-        if (std::isdigit(ch))
+        unsigned char ch = static_cast<unsigned char>(rawText[i]);
+        int clen = Utf8CharLen(ch);
+
+        if (clen > 1)
+        {
+            if (!word.empty())
+            {
+                for (auto& c : word)
+                    c = static_cast<char>(std::tolower(c));
+                wordList.push_back(word);
+                word.clear();
+            }
+            if (i + clen <= rawText.size())
+                wordList.push_back(rawText.substr(i, clen));
+            i += clen;
             continue;
+        }
+
+        if (std::isdigit(ch))
+        {
+            i++;
+            continue;
+        }
 
         if (std::ispunct(ch) || std::isspace(ch))
         {
@@ -24,9 +55,11 @@ std::vector<std::string> cleanAndSplit(const std::string& rawText)
                 wordList.push_back(word);
                 word.clear();
             }
+            i++;
             continue;
         }
         word += static_cast<char>(ch);
+        i++;
     }
 
     if (!word.empty())

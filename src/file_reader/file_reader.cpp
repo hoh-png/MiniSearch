@@ -1,6 +1,4 @@
-#define FILEPREPROC_EXPORTS
 #include "file_reader.h"
-
 #include <windows.h>
 #include <vector>
 #include <unordered_map>
@@ -32,16 +30,47 @@ static void SafeStrCopy(char* dest, size_t destSize, const char* src)
     dest[destSize - 1] = '\0';
 }
 
-// 清洗 + 英文分词
+// 获取UTF-8字符的字节长度
+static int Utf8CharLen(unsigned char lead)
+{
+    if (lead < 0x80) return 1;
+    if ((lead & 0xE0) == 0xC0) return 2;
+    if ((lead & 0xF0) == 0xE0) return 3;
+    if ((lead & 0xF8) == 0xF0) return 4;
+    return 1;
+}
+
+// 清洗 + 分词（兼容UTF-8中英文）
 static std::vector<std::string> CleanAndTokenize(const std::string& raw)
 {
     std::vector<std::string> tokens;
     std::string word;
 
-    for (unsigned char ch : raw)
+    for (size_t i = 0; i < raw.size(); )
     {
-        if (std::isdigit(ch))
+        unsigned char ch = static_cast<unsigned char>(raw[i]);
+        int clen = Utf8CharLen(ch);
+
+        if (clen > 1)
+        {
+            if (!word.empty())
+            {
+                for (auto& c : word)
+                    c = static_cast<char>(std::tolower(c));
+                tokens.push_back(word);
+                word.clear();
+            }
+            if (i + clen <= raw.size())
+                tokens.push_back(raw.substr(i, clen));
+            i += clen;
             continue;
+        }
+
+        if (std::isdigit(ch))
+        {
+            i++;
+            continue;
+        }
 
         if (std::ispunct(ch) || std::isspace(ch))
         {
@@ -52,9 +81,11 @@ static std::vector<std::string> CleanAndTokenize(const std::string& raw)
                 tokens.push_back(word);
                 word.clear();
             }
+            i++;
             continue;
         }
         word += static_cast<char>(ch);
+        i++;
     }
 
     if (!word.empty())
@@ -73,13 +104,13 @@ static std::wstring Utf8ToWide(const char* utf8)
         return L"";
 
     int len = MultiByteToWideChar(CP_UTF8, 0, utf8, -1, nullptr, 0);
-    if (len <= 0)
+    if (len <= 1)
         return L"";
 
-    std::wstring buf(len, L'\0');
+    std::wstring buf(len - 1, L'\0');
     MultiByteToWideChar(CP_UTF8, 0, utf8, -1, &buf[0], len);
     return buf;
-}
+}   
 
 // 读取 UTF-8 文本文件（支持中文路径）
 static std::string ReadTxtFile(const std::wstring& widePath)
