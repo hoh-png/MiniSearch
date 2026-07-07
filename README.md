@@ -36,10 +36,13 @@ cmake -B build
 # 编译
 cmake --build build --target MiniSearch
 
-# 运行（指定一个包含 txt 文件的文件夹）
+# 运行
 cd build
-.\bin\MiniSearch.exe (/* 此处替换为实际的 txt 文件夹路径 */)
-# 例如：.\bin\MiniSearch.exe "C:\Users\HOHUI\Desktop\task3\test"
+
+# 方式一：命令行传参
+.\bin\MiniSearch.exe "<此处写入文件夹路径>"
+
+# 方式二：双击 MiniSearch.exe，根据提示输入路径
 ```
 
 ## 使用方法
