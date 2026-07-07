@@ -130,5 +130,17 @@
   "command": "C:\\mingw64\\bin\\g++.exe -DBENCHMARK_STATIC_DEFINE @CMakeFiles/mini_search_benchmark.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\mini_search_benchmark.dir\\benchmark_search.cpp.obj -c C:\\Users\\HOHUI\\Desktop\\task3\\benchmark\\benchmark_search.cpp",
   "file": "C:/Users/HOHUI/Desktop/task3/benchmark/benchmark_search.cpp",
   "output": "benchmark/CMakeFiles/mini_search_benchmark.dir/benchmark_search.cpp.obj"
+},
+{
+  "directory": "C:/Users/HOHUI/Desktop/task3/build/src/file_reader",
+  "command": "C:\\mingw64\\bin\\g++.exe -DFILEPREPROC_EXPORTS -DFilePreproc_EXPORTS @CMakeFiles/FilePreproc.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FilePreproc.dir\\file_reader.cpp.obj -c C:\\Users\\HOHUI\\Desktop\\task3\\src\\file_reader\\file_reader.cpp",
+  "file": "C:/Users/HOHUI/Desktop/task3/src/file_reader/file_reader.cpp",
+  "output": "src/file_reader/CMakeFiles/FilePreproc.dir/file_reader.cpp.obj"
+},
+{
+  "directory": "C:/Users/HOHUI/Desktop/task3/build/src/query_engine",
+  "command": "C:\\mingw64\\bin\\g++.exe -DQUERY_PARSE_EXPORTS -DQueryParse_EXPORTS @CMakeFiles/QueryParse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\QueryParse.dir\\query_engine.cpp.obj -c C:\\Users\\HOHUI\\Desktop\\task3\\src\\query_engine\\query_engine.cpp",
+  "file": "C:/Users/HOHUI/Desktop/task3/src/query_engine/query_engine.cpp",
+  "output": "src/query_engine/CMakeFiles/QueryParse.dir/query_engine.cpp.obj"
 }
 ]

@@ -212,6 +212,32 @@ mini_search_benchmark/fast:
 	$(MAKE) $(MAKESILENT) -f benchmark\CMakeFiles\mini_search_benchmark.dir\build.make benchmark/CMakeFiles/mini_search_benchmark.dir/build
 .PHONY : mini_search_benchmark/fast
 
+#=============================================================================
+# Target rules for targets named FilePreproc
+
+# Build rule for target.
+FilePreproc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 FilePreproc
+.PHONY : FilePreproc
+
+# fast build rule for target.
+FilePreproc/fast:
+	$(MAKE) $(MAKESILENT) -f src\file_reader\CMakeFiles\FilePreproc.dir\build.make src/file_reader/CMakeFiles/FilePreproc.dir/build
+.PHONY : FilePreproc/fast
+
+#=============================================================================
+# Target rules for targets named QueryParse
+
+# Build rule for target.
+QueryParse: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QueryParse
+.PHONY : QueryParse
+
+# fast build rule for target.
+QueryParse/fast:
+	$(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/build
+.PHONY : QueryParse/fast
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -248,7 +274,9 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... FilePreproc
 	@echo ... MiniSearch
+	@echo ... QueryParse
 	@echo ... benchmark
 	@echo ... benchmark_main
 	@echo ... mini_search_benchmark

@@ -32,12 +32,14 @@ C:/Users/HOHUI/Desktop/task3/build/src/CMakeFiles/list_install_components.dir
 C:/Users/HOHUI/Desktop/task3/build/src/CMakeFiles/install.dir
 C:/Users/HOHUI/Desktop/task3/build/src/CMakeFiles/install/local.dir
 C:/Users/HOHUI/Desktop/task3/build/src/CMakeFiles/install/strip.dir
+C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/FilePreproc.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/edit_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/rebuild_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/list_install_components.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/install.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/install/local.dir
 C:/Users/HOHUI/Desktop/task3/build/src/file_reader/CMakeFiles/install/strip.dir
+C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/QueryParse.dir
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/edit_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/rebuild_cache.dir
 C:/Users/HOHUI/Desktop/task3/build/src/query_engine/CMakeFiles/list_install_components.dir

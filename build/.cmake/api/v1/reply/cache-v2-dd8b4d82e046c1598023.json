@@ -2434,6 +2434,42 @@
 			"value" : "C:/Users/HOHUI/Desktop/task3/third_party/benchmark"
 		},
 		{
+			"name" : "file_reader_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/HOHUI/Desktop/task3/build/src/file_reader"
+		},
+		{
+			"name" : "file_reader_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "file_reader_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/HOHUI/Desktop/task3/src/file_reader"
+		},
+		{
 			"name" : "mini_search_BINARY_DIR",
 			"properties" : 
 			[
@@ -2468,6 +2504,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/HOHUI/Desktop/task3"
+		},
+		{
+			"name" : "query_engine_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/HOHUI/Desktop/task3/build/src/query_engine"
+		},
+		{
+			"name" : "query_engine_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "query_engine_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/HOHUI/Desktop/task3/src/query_engine"
 		}
 	],
 	"kind" : "cache",

@@ -160,6 +160,44 @@ depend:
 	cd /d C:\Users\HOHUI\Desktop\task3\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/file_reader/CMakeFiles/FilePreproc.dir/rule:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/file_reader/CMakeFiles/FilePreproc.dir/rule
+.PHONY : src/file_reader/CMakeFiles/FilePreproc.dir/rule
+
+# Convenience name for target.
+FilePreproc: src/file_reader/CMakeFiles/FilePreproc.dir/rule
+.PHONY : FilePreproc
+
+# fast build rule for target.
+FilePreproc/fast:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\file_reader\CMakeFiles\FilePreproc.dir\build.make src/file_reader/CMakeFiles/FilePreproc.dir/build
+.PHONY : FilePreproc/fast
+
+file_reader.obj: file_reader.cpp.obj
+.PHONY : file_reader.obj
+
+# target to build an object file
+file_reader.cpp.obj:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\file_reader\CMakeFiles\FilePreproc.dir\build.make src/file_reader/CMakeFiles/FilePreproc.dir/file_reader.cpp.obj
+.PHONY : file_reader.cpp.obj
+
+file_reader.i: file_reader.cpp.i
+.PHONY : file_reader.i
+
+# target to preprocess a source file
+file_reader.cpp.i:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\file_reader\CMakeFiles\FilePreproc.dir\build.make src/file_reader/CMakeFiles/FilePreproc.dir/file_reader.cpp.i
+.PHONY : file_reader.cpp.i
+
+file_reader.s: file_reader.cpp.s
+.PHONY : file_reader.s
+
+# target to generate assembly for a file
+file_reader.cpp.s:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\file_reader\CMakeFiles\FilePreproc.dir\build.make src/file_reader/CMakeFiles/FilePreproc.dir/file_reader.cpp.s
+.PHONY : file_reader.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -172,6 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... FilePreproc
+	@echo ... file_reader.obj
+	@echo ... file_reader.i
+	@echo ... file_reader.s
 .PHONY : help
 
 

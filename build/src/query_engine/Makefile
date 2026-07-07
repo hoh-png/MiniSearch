@@ -160,6 +160,44 @@ depend:
 	cd /d C:\Users\HOHUI\Desktop\task3\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/query_engine/CMakeFiles/QueryParse.dir/rule:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/query_engine/CMakeFiles/QueryParse.dir/rule
+.PHONY : src/query_engine/CMakeFiles/QueryParse.dir/rule
+
+# Convenience name for target.
+QueryParse: src/query_engine/CMakeFiles/QueryParse.dir/rule
+.PHONY : QueryParse
+
+# fast build rule for target.
+QueryParse/fast:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/build
+.PHONY : QueryParse/fast
+
+query_engine.obj: query_engine.cpp.obj
+.PHONY : query_engine.obj
+
+# target to build an object file
+query_engine.cpp.obj:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/query_engine.cpp.obj
+.PHONY : query_engine.cpp.obj
+
+query_engine.i: query_engine.cpp.i
+.PHONY : query_engine.i
+
+# target to preprocess a source file
+query_engine.cpp.i:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/query_engine.cpp.i
+.PHONY : query_engine.cpp.i
+
+query_engine.s: query_engine.cpp.s
+.PHONY : query_engine.s
+
+# target to generate assembly for a file
+query_engine.cpp.s:
+	cd /d C:\Users\HOHUI\Desktop\task3\build && $(MAKE) $(MAKESILENT) -f src\query_engine\CMakeFiles\QueryParse.dir\build.make src/query_engine/CMakeFiles/QueryParse.dir/query_engine.cpp.s
+.PHONY : query_engine.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -172,6 +210,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... QueryParse
+	@echo ... query_engine.obj
+	@echo ... query_engine.i
+	@echo ... query_engine.s
 .PHONY : help
 
 

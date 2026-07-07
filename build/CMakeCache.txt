@@ -406,6 +406,15 @@ benchmark_IS_TOP_LEVEL:STATIC=OFF
 benchmark_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/third_party/benchmark
 
 //Value Computed by CMake
+file_reader_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build/src/file_reader
+
+//Value Computed by CMake
+file_reader_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+file_reader_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/src/file_reader
+
+//Value Computed by CMake
 mini_search_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build
 
 //Value Computed by CMake
@@ -413,6 +422,15 @@ mini_search_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 mini_search_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3
+
+//Value Computed by CMake
+query_engine_BINARY_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/build/src/query_engine
+
+//Value Computed by CMake
+query_engine_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+query_engine_SOURCE_DIR:STATIC=C:/Users/HOHUI/Desktop/task3/src/query_engine
 
 
 ########################

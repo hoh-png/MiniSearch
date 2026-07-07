@@ -68,7 +68,7 @@
 				"third_party/benchmark/src/libbenchmark.a"
 			],
 			"targetId" : "benchmark::@27580315aaf28f4a2bec",
-			"targetIndex" : 1,
+			"targetIndex" : 3,
 			"type" : "target"
 		},
 		{
@@ -80,7 +80,7 @@
 				"third_party/benchmark/src/libbenchmark_main.a"
 			],
 			"targetId" : "benchmark_main::@27580315aaf28f4a2bec",
-			"targetIndex" : 2,
+			"targetIndex" : 4,
 			"type" : "target"
 		},
 		{
@@ -125,11 +125,11 @@
 			[
 				{
 					"id" : "benchmark::@27580315aaf28f4a2bec",
-					"index" : 1
+					"index" : 3
 				},
 				{
 					"id" : "benchmark_main::@27580315aaf28f4a2bec",
-					"index" : 2
+					"index" : 4
 				}
 			],
 			"paths" : 
