@@ -43,7 +43,7 @@ cd build
 .\bin\MiniSearch.exe "<此处写入文件夹路径>"
 # 示例：.\bin\MiniSearch.exe "C:\\Users\\HOHUI\\Desktop\\txts"
 
-# 方式二：双击 MiniSearch.exe，根据提示输入路径
+# 方式二：下载软件包后双击 MiniSearch.exe，根据提示输入路径
 ```
 
 ## 使用方法
