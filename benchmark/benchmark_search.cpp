@@ -38,7 +38,7 @@ static void BM_ProcessTxtFolder(benchmark::State& state) {
     for (auto _ : state) {
         DocData* docArr = nullptr;
         int docCount = 0;
-        int ret = ProcessTxtFolder(".", &docArr, &docCount);
+        int ret = ProcessTxtFolder("C:\\Users\\HOHUI\\Desktop\\txts", &docArr, &docCount);
         benchmark::DoNotOptimize(ret);
         if (docArr) FreeDocDataArray(docArr, docCount);
     }
