@@ -73,7 +73,7 @@ cd build
 
 ```bash
 cmake --build build --target mini_search_benchmark
-.\bin\mini_search_benchmark.exe
+.\build\bin\mini_search_benchmark.exe
 ```
 
 ## 项目结构
